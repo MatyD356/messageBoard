@@ -3,10 +3,11 @@ extends layout
 
 block content
   h1= title
-  a(href='/new')='add message'
   each message in messages
     section
-      p=message.text
-    footer
-      p=message.user
-      p=message.added
+      main
+        p=message.text
+      footer
+        p=message.user
+        p=message.added.hour+':'+message.added.minutes
+  a(href='/new')='Add message'

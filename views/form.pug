@@ -6,8 +6,8 @@ block content
         h1= 'Message Board'
     main
         form(method='POST' action='/new')
-          | name
-          input(type="text" name='message')
           | message
+          textarea(name='message')
+          | name
           input(type='text' name='name')
           input(type='submit' value='Post')
